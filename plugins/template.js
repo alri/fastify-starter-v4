@@ -19,6 +19,8 @@ module.exports = fp(async function (fastify) {
     fastify.register(fastifyStatic, {
         root: path.join(__dirname, '../public'),
     })
+
+ 
     
 
     //fav icon
@@ -46,9 +48,7 @@ module.exports = fp(async function (fastify) {
                 env.addGlobal('bootstrapCss', helper.bootstrapCss);
                 env.addGlobal('bootstrapJs', helper.bootstrapJs);
                 env.addGlobal('img', helper.img);
-                env.addGlobal('cssSpa', helper.cssSpa);
-                env.addGlobal('jsSpa', helper.jsSpa);
-                env.addGlobal('imgSpa', helper.imgSpa);
+                env.addGlobal('public', helper.public);
                 env.addGlobal('dist', helper.dist);
                 env.addGlobal('test', helper.test);
                 env.addFilter('shorten', function (str, count) {

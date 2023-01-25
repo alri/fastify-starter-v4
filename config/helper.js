@@ -53,17 +53,10 @@ const img = function(link=false) {
     return process.env.APP_URL+'/images/'+link;
 };
 
-const imgSpa = function(link=false) {
-    return process.env.APP_URL+'/dist/images/'+link;
+const public = function(link=false) {
+    return process.env.APP_URL+'/'+link;
 };
 
-const cssSpa = function(link=false) {
-    return process.env.APP_URL+'/dist/css/'+link;
-}
-
-const jsSpa = function(link=false) {
-    return process.env.APP_URL+'/dist/js/'+link;
-};
 
 const dist = function(link=false) {
     return process.env.APP_URL+'/dist/'+link;
@@ -85,9 +78,7 @@ module.exports = {
     bootstrapCss:bootstrapCss,
     bootstrapJs:bootstrapJs,
     img:img,
-    cssSpa:cssSpa,
-    jsSpa:jsSpa,
-    imgSpa:imgSpa,
+    public:public,
     dist:dist,
     root:root,
     test:test

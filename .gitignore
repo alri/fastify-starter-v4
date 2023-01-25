@@ -59,3 +59,4 @@ profile*
 
 node_modules/
 storage/
+vite/node_modules/

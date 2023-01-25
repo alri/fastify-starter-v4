@@ -28,8 +28,8 @@ function index(request,reply)
 
 function spa(request,reply)
 {
-    //reply.send("test");
-    return reply.view('layouts/spa/master.njk');
+    return reply.sendFile('index.html'); //or index.html in public folder
+    return reply.view('spa/app.njk'); //or app.njk in resources/views/spa folder  
 }
 
 function test(request,reply)

@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": " node -r dotenv/config ./bootstrap/server.js",
-    "server": " nodemon -r dotenv/config --require pretty-error/start  --ignore storage/sessions/ ./bootstrap/server.js"
+    "server": " nodemon -r dotenv/config --require pretty-error/start  --ignore storage/sessions/ ./bootstrap/server.js",
+    "dev": "cd vite && npm run dev",
+    "build": "cd vite &&  npm run build",
+    "preview": "cd vite && npm run preview"
   },
   "author": "alri",
   "license": "MIT",
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
+    "concurrently": "^7.6.0",
     "prisma": "^4.8.0"
   }
 }
